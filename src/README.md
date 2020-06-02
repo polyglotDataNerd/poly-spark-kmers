@@ -31,11 +31,11 @@ The project tree is by resource with packages decoupled by subject matter. The m
        
        The object is ran for all files in the main method within the java entry point and each result is outputted to a staging directory. The last step that runs is a utility method that consolidates all the files in staging and outputs to the output directory. 
          
-   - [**Similarity Class**](https://github.com/KariusDx/Similarity_Exercise_Gerard/tree/master/src/main/scala/com/poly/spark/algorithm/Similarity.scala)
+   - [**Similarity Class**](https://github.com/polyglotDataNerd/poly-spark-kmers/blob/master/src/main/scala/com/poly/spark/algorithm/Similarity.scala)
    
    This class has a method called genomeSimilarity() that calculates the similarities between genomes by comparing a parent genome source and iterating it over the whole genome to intersect and finds the number of base 20 nucleotides that match each other and calculates a score between 1 and 0 for similarity. 1 being similar and 0 having no relationship.  
    
-   For constraint of time I wasn't able to plot but the output of similarites is pretty self explantory. [Insights Output Directory](https://github.com/KariusDx/Similarity_Exercise_Gerard/tree/master/insights)
+   For constraint of time I wasn't able to plot but the output of similarites is pretty self explantory. [Insights Output Directory](https://github.com/polyglotDataNerd/poly-spark-kmers/blob/master/insights)
         
 -   
 
