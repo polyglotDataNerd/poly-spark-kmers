@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: resources/
+Main-Class: com.poly.exercise.Entry
+
