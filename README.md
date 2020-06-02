@@ -1,5 +1,5 @@
 # Gerard's Readme
-[Readme](https://github.com/polyglotDataNerd/Similarity_Exercise_Gerard/blob/master/src/README.md) 
+[Readme](https://github.com/polyglotDataNerd/poly-spark-kmers/blob/master/src/README.md) 
 
 
 
