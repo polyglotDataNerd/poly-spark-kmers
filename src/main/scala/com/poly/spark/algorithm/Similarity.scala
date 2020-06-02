@@ -22,7 +22,7 @@ class Similarity(inputDir: String, output: String) {
     val sparkSession = SparkSession
       .builder()
       .master("local[*]")
-      .appName("KmerLocal")
+      .appName("SimilarityLocal")
       .config("spark.driver.bindAddress", "127.0.0.1")
       .config("spark.driver.host", "127.0.0.1")
       .config("spark.rpc.message.maxSize", "2047")

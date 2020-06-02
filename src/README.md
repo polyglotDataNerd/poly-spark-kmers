@@ -19,11 +19,11 @@ In the spirit of parallelism and maximizing resources to process such certain co
 
 Summary
 - 
-This project's goal is to provide insights on how many base 20 instances occur in a genome file given a top limit where it will output the number of kmers to show significance. Since this project uses Maven as the build tool the entry point to this application is within a java [POJO](https://github.com/polyglotDataNerd/Similarity_Exercise_Gerard/blob/master/src/main/java/com/poly/exercise/Entry.java). The rest is written in Scala, I used this hybrid approach because of the ease of how both Java and Scala can interact with one another interchangeably within shared libraries. I am also a lot more familiar with Maven than sbt. 
+This project's goal is to provide insights on how many base 20 instances occur in a genome file given a top limit where it will output the number of kmers to show significance. Since this project uses Maven as the build tool the entry point to this application is within a java [POJO](https://github.com/polyglotDataNerd/poly-spark-kmers/blob/master/src/main/java/com/poly/exercise/Entry.java). The rest is written in Scala, I used this hybrid approach because of the ease of how both Java and Scala can interact with one another interchangeably within shared libraries. I am also a lot more familiar with Maven than sbt. 
 
 The project tree is by resource with packages decoupled by subject matter. The most notable Class is in the algorithm Scala package called Kmer.scala.
 
-   - [**KMer Class**](https://github.com/polyglotDataNerd/Similarity_Exercise_Gerard/blob/master/src/main/scala/com/poly/spark/algorithm/Kmer.scala)
+   - [**KMer Class**](https://github.com/polyglotDataNerd/poly-spark-kmers/blob/master/src/main/scala/com/poly/spark/algorithm/Kmer.scala)
        
        This class has a method called calculateKmers() that runs an isolated local SparkSession to utilize the RDD/Dataframe patterns to read, calculate and write the output. The constructor parameters passed are used within this method. What this method is doing is it's taking an input object which in this case is one of the genome sequence files, converts it into an RDD that gets flatten (flatMap) and filters out noise to focus on the base nucleotides {A, C, G, T} using the Kmer parameter passed through the constructor (base 20).  
        
@@ -49,11 +49,11 @@ Infrastructure
 
 * Runs the docker build with Maven and Scala dependencies along with data sources to be able to run in a local docker container:
         
-        ~/external/Similarity_Exercise_Gerard/infrastructur/apply.sh
+        ~/external/poly-spark-kmers/infrastructur/apply.sh
 
 * Runs Application From Container (need to allocate heap memory for spark to run):
 
-        docker run -it kmer:1590945691 java -Xms1G -Xmx5G -cp Similarity_Exercise_Gerard-1.0.jar com.poly.exercise.Entry "/Users/gerardbartolome/external/Similarity_Exercise_Gerard/data/" 20 1000 "/Users/gerardbartolome/external/Similarity_Exercise_Gerard/staging/" "/Users/gerardbartolome/external/Similarity_Exercise_Gerard/output/"
+        docker run -it kmer:1590945691 java -Xms1G -Xmx5G -cp poly-spark-kmers-1.0.jar com.poly.exercise.Entry "/Users/gerardbartolome/external/poly-spark-kmers/data/" 20 1000 "/Users/gerardbartolome/external/poly-spark-kmers/staging/" "/Users/gerardbartolome/external/poly-spark-kmers/output/"
 
     - **1590945691** is the current EPOCH time used to tag latest version of container. 
 
@@ -75,7 +75,7 @@ to generate dependant libraries within the pom.xml file.
 
 * Build .jar
         
-        cd ~/external/Similarity_Exercise_Gerard/
+        cd ~/external/poly-spark-kmers/
         mvn clean package
 
 * Run the jar (no need to set heap)

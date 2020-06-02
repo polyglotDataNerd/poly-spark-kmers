@@ -11,3 +11,5 @@
 *.tfstate.*
 *target/*
 *dependency-reduced-pom.xml*
+*.crc
+*_SUCCESS
