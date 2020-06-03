@@ -36,12 +36,7 @@ The project tree is by resource with packages decoupled by subject matter. The m
    This class has a method called genomeSimilarity() that calculates the similarities between genomes by comparing a parent genome source and iterating it over the whole genome to intersect and finds the number of base 20 nucleotides that match each other and calculates a score between 1 and 0 for similarity. 1 being similar and 0 having no relationship.  
    
    For constraint of time I wasn't able to plot but the output of similarites is pretty self explantory. [Insights Output Directory](https://github.com/polyglotDataNerd/poly-spark-kmers/blob/master/insights)
-        
--   
-
-I am no SME on mapping genome sequencing and reading the significance of kmers, the one curious question I had was how many of these base 20 kmers are common in these multiple files? I assumed when that happens there is commonality in the higher instances of kmers that these organisms may have some form of relation?
-
-      
+              
 Infrastructure
 - 
 
